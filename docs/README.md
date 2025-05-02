@@ -39,7 +39,7 @@ Este é um projeto simples de **Lista de Tarefas** desenvolvido com HTML, CSS e 
 
 ## 🌐 Acesso
 
-🔗 [Clique aqui para acessar a aplicação](#coloque-o-link-ao-final-do-tutorial)
+🔗 [Clique aqui para acessar a aplicação](https://jonhberlim20.github.io/lista-de-tarefas/)
 
 ---
 
