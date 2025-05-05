@@ -62,7 +62,6 @@ ul li {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo para o campo de entrada */
 input[type="text"] {
     padding: 10px;
     width: 80%;
@@ -90,4 +89,42 @@ input[type="text"]:focus {
 .mensagem.transicao
 {
     opacity: 1;
+}
+
+button.remover {
+    background-color: #A34743;
+    color: #F4F0EA;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.6em;
+    margin-left: 5px;
+    transition: background-color 0.3s ease;
+}
+button.remover:hover {
+    background-color: #60041A;
+}
+button.editar {
+    background-color: #331F19;
+    color: #F4F0EA;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.6em;
+    margin-left: 5px;
+    transition: background-color 0.3s ease;
+}
+button.editar:hover {
+    background-color: #744d41;
+}
+
+.botao_lista {
+    background-color: #A34743;
+}
+
+.botao_lista:hover {
+    background-color: #60041A;
+    color: #F4F0EA;
 }
