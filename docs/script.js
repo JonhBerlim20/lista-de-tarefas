@@ -19,6 +19,28 @@ function mostrarMensagem(texto, cor)
     }, 4000); 
 }
 
+function adicionarTarefa() {
+
+    const inputTarefa = document.getElementById("inputTarefa");
+    let tarefa = capitalize(inputTarefa.value.trim()); //A variavel tarefa armazena o valor digitado pelo usuario de dentro da caixa de texto devido o uso do .value
+
+    if (tarefas.includes(tarefa)) {
+        mostrarMensagem("Esta tarefa já está registrada!", "#ea0000");
+    } 
+    else {
+        if (tarefa != "") {
+            mostrarMensagem("Tarefa adicionada com sucesso!", "#008000");
+            tarefas.push(tarefa);
+            atualizarTarefas();
+        }
+        else {
+            mostrarMensagem("O campo está vazio. Digite uma tarefa para continuar!", "#ea0000");
+        }
+    }
+
+    inputTarefa.value = ""; // A informação da caixa é esvaziada.
+}
+
 function capitalize(str) {
     return str.split(" ").map(i => i.charAt(0).toUpperCase() + i.slice(1).toLowerCase()).join(" ");
 }
@@ -73,28 +95,6 @@ function limparTudo() {
     else {
         mostrarMensagem("Não há nenhum item na lista!", "#ea0000");
     }
-}
-
-function adicionarTarefa() {
-
-    const inputTarefa = document.getElementById("inputTarefa");
-    let tarefa = capitalize(inputTarefa.value.trim()); //A variavel tarefa armazena o valor digitado pelo usuario de dentro da caixa de texto devido o uso do .value
-
-    if (tarefas.includes(tarefa)) {
-        mostrarMensagem("Esta tarefa já está registrada!", "#ea0000");
-    } 
-    else {
-        if (tarefa != "") {
-            mostrarMensagem("Tarefa adicionada com sucesso!", "#008000");
-            tarefas.push(tarefa);
-            atualizarTarefas();
-        }
-        else {
-            mostrarMensagem("O campo está vazio. Digite uma tarefa para continuar!", "#ea0000");
-        }
-    }
-
-    inputTarefa.value = ""; // A informação da caixa é esvaziada.
 }
 
 window.onload = () => {
